@@ -31,6 +31,7 @@
 - [Как задать тайм-аут выполнения теста?](https://github.com/junit-team/junit4/wiki/Timeout-for-tests)
 - [Как задать альтернативный тестовый сценарий?](https://github.com/junit-team/junit4/wiki/Exception-testing)
 - Каковы механизмы расширения функциональности тестов? [Запускальщики](https://github.com/junit-team/junit4/wiki/Test-runners) и [Правила](https://github.com/junit-team/junit4/wiki/Rules)
+- Отдельно про @InjectMocks
 - [Как сделать параметризованный тестовый сценарий?](https://github.com/junit-team/junit4/wiki/Parameterized-tests)
 - [Как группировать тесты в группы?](https://github.com/junit-team/junit4/wiki/aggregating-tests-in-suites)
 - [Более гибкий способ группировки тестов](https://github.com/junit-team/junit4/wiki/Categories)
@@ -43,12 +44,12 @@
 - Практика: обоснованный выбор покрытия и реализация поддерживаемых модульных тестов для legacy-системы с контролем покрытия через Sonar и библиотеку пермутационного тестирования PIT
 - Демо: тест-дублирование REST-сервисов в интеграционном тесте – [WireMock](http://wiremock.org/docs/getting-started/) и [MockMVC](http://docs.spring.io/spring-security/site/docs/current/reference/html/test-mockmvc.html)
 
-### Системное UI-тестирование на Selenium
+### Системное UI-тестирование на [Selenium](https://kreisfahrer.gitbooks.io/selenium-webdriver/content/index.html)
 - Как можно покрыть тестами UI системы?
-- Как можно изолироваться от типа браузера?
 - Можно ли не запускать браузер в процессе UI-тестирования?
 - Какова типичная структура системного UI-теста?
 - Демо: автогенерация Selenium-теста из записи действий пользователя
+- [Обзор фич](http://seleniumsimplified.com/2012/08/categorising-webdrivernavigation-interrogation-manipulation/)
 - Как обеспечить переход по URL?
 - Как обеспечить локализацию элементов на HTML-странице?
 - Как обеспечить ввод в HTML-элементы ввода?
