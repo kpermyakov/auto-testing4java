@@ -24,16 +24,18 @@
 - Как можно сформулировать признаки тестопригодного дизайна системы?
 - Практика: тест-дизайн и обоснованный выбор покрытия для legacy-системы
 
-### Модульное и интеграционное тестирование на JUnit 4
+### [Модульное и интеграционное тестирование на JUnit 4](https://github.com/junit-team/junit4/wiki)
 - Как описать тест-кейс?
 - Как описать тестовый сценарий?
-- Как задать тайм-аут выполнения теста?
-- Как задать альтернативный тестовый сценарий?
-- Как сделать параметризованный тестовый сценарий?
-- Как группировать тесты в группы?
-- Каковы механизмы расширения функциональности тестов?
-- Как обеспечить упрощение и читабельность проверок?
-- Как можно обеспечить повторное использование фикстур?
+- [Что забываем как четвертый шаг теста?](https://github.com/junit-team/junit4/wiki/Assumptions-with-assume)
+- [Как задать тайм-аут выполнения теста?](https://github.com/junit-team/junit4/wiki/Timeout-for-tests)
+- [Как задать альтернативный тестовый сценарий?](https://github.com/junit-team/junit4/wiki/Exception-testing)
+- Каковы механизмы расширения функциональности тестов? [Запускальщики](https://github.com/junit-team/junit4/wiki/Test-runners) и [Правила](https://github.com/junit-team/junit4/wiki/Rules)
+- [Как сделать параметризованный тестовый сценарий?](https://github.com/junit-team/junit4/wiki/Parameterized-tests)
+- [Как группировать тесты в группы?](https://github.com/junit-team/junit4/wiki/aggregating-tests-in-suites)
+- [Более гибкий способ группировки тестов](https://github.com/junit-team/junit4/wiki/Categories)
+- Как обеспечить упрощение и читабельность проверок? [Hamcrest](https://github.com/junit-team/junit4/wiki/Matchers-and-assertthat) и [FEST](https://github.com/alexruiz/fest-assert-2.x/wiki/One-minute-starting-guide)
+- Как можно обеспечить повторное использование фикстур? [@BeforeXXX](https://github.com/junit-team/junit4/wiki/Test-fixtures) и FixtureBuilders 
 - Что из себя представляет проектный test framework?
 - Как обеспечить автономность модульного теста?
 - В чем разница между различными видами тест-дублеров?
