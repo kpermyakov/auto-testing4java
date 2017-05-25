@@ -7,8 +7,9 @@ import org.junit.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
+import static org.fest.assertions.api.Assertions.assertThat;
 import static org.hamcrest.CoreMatchers.containsString;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 public class LoggerSystemTest {
     //region Fixture
@@ -42,8 +43,10 @@ public class LoggerSystemTest {
         //endregion
 
         //region Then
-        assertThat(out.toString(),
-                containsString("ERROR: test message"));
+        assertThat("12345").endsWith("5").hasSize(4);
+
+//        assertThat(out.toString(),
+//                containsString("ERROR: test message"));
         //endregion
     }
 }
