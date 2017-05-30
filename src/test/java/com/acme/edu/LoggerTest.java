@@ -1,6 +1,7 @@
 package com.acme.edu;
 
 import org.junit.*;
+import org.junit.rules.ExpectedException;
 import org.mockito.Mockito;
 
 import static org.mockito.Matchers.any;
@@ -10,9 +11,6 @@ import static org.mockito.Mockito.*;
 public class LoggerTest {
     private Logger sut;
     private LoggerSaver saverMock;
-
-    //@Rule
-    //public final
 
     @BeforeClass
     public static void setUpCase() {
@@ -70,5 +68,26 @@ public class LoggerTest {
         verify(saverMock, times(0))
                 .save(anyString());
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionWhenSaverIsNull()
+    {
+        sut = new Logger(
+                new MockitoFilterBuilder().build(),
+                null
+        );
+        sut.log("test message");
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionWhenLoggerIsNull()
+    {
+        sut = new Logger(
+                null,
+                saverMock
+        );
+        sut.log("test message");
+    }
+
 }
 

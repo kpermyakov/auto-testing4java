@@ -10,6 +10,8 @@ public class Logger {
     }
 
     public void log(String message) {
+        if (loggerFilter == null) throw new IllegalArgumentException("logger filter is null");
+        if (loggerSaver == null) throw new IllegalArgumentException("logger saver is null");
         if (loggerFilter.filter(message)) {
             loggerSaver.save(message);
         }
