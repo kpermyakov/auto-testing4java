@@ -1,5 +1,6 @@
 package com.acme.edu;
 
+import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.when;
@@ -25,16 +26,13 @@ public class MockitoFilterBuilder {
         return this;
     }
 
-    public MockitoFilterBuilder build() {
-        LoggerFilter mockToReturn;
-        if (isSpy) {
-            mockToReturn = spy(new MessageContentLoggerFilter());
-        } else {
-            mockToReturn = mock(LoggerFilter.class);
-        }
+    public LoggerFilter build() {
+        LoggerFilter mockToReturn = mock(LoggerFilter.class);
+        when(mockToReturn.filter(anyString())).thenReturn(withFiltering);
 
-        when(mockToReturn.withFiltering()).thenReturn(withFiltering);
-        when(mockToReturn.withLogging()).thenReturn(withLogging);
+        //when(mockToReturn.withFiltering()).thenReturn(withFiltering);
+        // when(mockToReturn.withLogging()).thenReturn(withLogging);
         return mockToReturn;
     }
+
 }

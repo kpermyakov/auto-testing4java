@@ -43,7 +43,7 @@ public class LoggerSystemTest {
         //endregion
 
         //region Then
-        assertThat("12345").endsWith("5").hasSize(4);
+        assertThat("12345").endsWith("5").hasSize(5);
 
 //        assertThat(out.toString(),
 //                containsString("ERROR: test message"));

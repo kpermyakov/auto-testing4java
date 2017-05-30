@@ -11,6 +11,9 @@ public class LoggerTest {
     private Logger sut;
     private LoggerSaver saverMock;
 
+    //@Rule
+    //public final
+
     @BeforeClass
     public static void setUpCase() {
 
@@ -42,17 +45,30 @@ public class LoggerTest {
     public void shouldLogWhenFilterPass() {
         sut = new Logger(
                 new MockitoFilterBuilder()
-                    .isSpy(true)
-                    .withLogging(false)
+                    .withFiltering(true)
                 .build(),
-                MockitoSaverBuilder
-                    .withFormatterFormatString("vggg")
-
+                saverMock
         );
 
         sut.log("test message");
 
-        verify(saverMock, times(2))
+        verify(saverMock, times(1))
                 .save("test message");
     }
+
+    @Test
+    public void shouldNotLogWhenFilterNotPassed()
+    {
+        sut = new Logger(
+                new MockitoFilterBuilder()
+                .withFiltering(false)
+                .build(),
+                saverMock
+        );
+        sut.log("test message");
+
+        verify(saverMock, times(0))
+                .save(anyString());
+    }
 }
+
